@@ -1,0 +1,49 @@
+<div class="flex justify-center">
+    <h2 class="underline underline-offset-8">Visual app - This is a test visualization app (Only for evaluation purposes)</h2>
+</div>
+
+<div>
+    <!-- Render Data table -->
+    <div>
+        <div class="mt-5 flex justify-center">
+            <h3 class="underline underline-offset-8">Data Table for Listing</h3>
+        </div>
+        {{> listing-data-table }}
+    </div>
+    <hr class="mt-5" />
+    <!-- Date Range Selection -->
+    <div class="text-center mt-2">
+        <label class="pt-2 underline underline-offset-8">New Listing Per Month with Average Revenue</label>
+    </div>
+    <div class="flex justify-end date-range-header">
+        <div class="flex mt-5">
+            <div class="mr-5 pt-2">
+                <label for="start">Start Date:</label for="start">
+                <input class="border-2 border-inherit rounded-md" type="date" name="Start Date" value="{{startDate}}" id="startDate" />
+            </div>
+            <div class="mr-5 pt-2">
+                <label for="end">End Date:</label for="end">
+                <input class="border-2 border-inherit rounded-md" type="date" name="End Date" value="{{endDate}}" id="endDate" />
+            </div>
+            <div class="mr-5 pt-2">
+                <label for="end">Set Limit</label for="end">
+                <input class="border-2 border-inherit rounded-md w-2/5" type="number" name="limit" value="{{limit}}" id="limit" />
+            </div>
+            <div class="mr-5">
+                <button id="fetch-selected-listing-data" class="bg-yellow-500 hover:bg-green-700 text-white font-bold mt-3 px-4 rounded-full">
+                    Apply
+                </button>
+            </div>
+            <!-- @TODO: For better UX a button to reset the date range can be added -->
+        </div>
+    </div>
+    <!-- Render Chart -->
+    <div class="h-[500px] w-full" id="chartContainer" key="chart-container">
+        <canvas id="revenue-listing-chart"></canvas>
+        <div id="chart-loader"></div>
+    </div>
+</div>
+
+<script>
+    renderLineChart('revenue-listing-chart', {{{ averageRevenueBySitesData }}});
+</script>

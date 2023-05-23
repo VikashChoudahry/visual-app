@@ -1,0 +1,55 @@
+body {
+    padding: 50px;
+    background-color: #f6f5f4;
+}
+
+tr:nth-child(odd) {
+    background-color: #f8eeee;
+}
+
+table.dataTable thead th {
+    text-align: center;
+}
+
+::-webkit-input-placeholder {
+    text-align: center;
+}
+
+#listings-table #table-search-columns input {
+    width: 100%;
+    padding: 3px;
+    box-sizing: border-box;
+}
+
+table.dataTable thead>tr>th {
+    text-align: center;
+}
+
+.dataTables_wrapper .dataTables_filter input {
+    padding: 0px 5px 3px 5px !important;
+}
+
+.dataTables_length {
+    padding: 0px 5px 3px 5px !important;
+}
+
+.loader {
+    border: 10px solid #f3f3f3; /* Light grey */
+    border-top: 10px solid #3498db; /* Blue */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+    margin: auto;
+    margin-top: -300px;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.date-range-header {
+    margin: 0px 182px;
+    display: flex;
+}

@@ -1,0 +1,25 @@
+{
+  "name": "visual-app",
+  "version": "1.0.0",
+  "description": "A test app to serve brokers, their listings and average revenues",
+  "scripts": {
+    "start": "node ./bin/www",
+    "start:watch": "nodemon ./bin/www"
+  },
+  "engines": {
+    "node": ">=18.19.1"
+  },
+  "dependencies": {
+    "cookie-parser": "^1.4.6",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "express-handlebars": "^7.0.7",
+    "lodash": "^4.17.21",
+    "pg": "^8.11.0"
+  },
+  "devDependencies": {
+    "dotenv": "^16.0.3",
+    "nodemon": "^2.0.22",
+    "winston": "^3.8.2"
+  }
+}

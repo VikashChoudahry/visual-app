@@ -1,0 +1,25 @@
+<table id="listings-table" class="table table-auto stripe w-full text-sm text-center">
+    <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-300">
+        <tr id="table-search-columns">
+            {{#each tableColumns }}
+                <th class="text-center">{{ this }}</th>
+            {{/each }}
+        </tr>
+        <tr>
+            {{#each tableColumns }}
+                <th class="border-slate-600 text-center">{{ this }}</th>
+            {{/each }}
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tableRows }}
+        <tr class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-300">
+            <td>{{ this.listingId }}</td>
+            <td>{{ this.listingMonth }}</td>
+            <td>{{ this.listingDate }}</td>
+            <td>{{ this.broker }}</td>
+            <td>{{ this.revenue }}</td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
